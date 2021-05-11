@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>  
     <head>
-        <title></title>
+        {% if title %}
+            <title>Clinic Auto - {{title}}</title>
+        {% else %}
+            <title>Clinic Auto</title>
+        {% endif %}
     </head>
     <body>
         <h1>Autonomous Applications</h1>

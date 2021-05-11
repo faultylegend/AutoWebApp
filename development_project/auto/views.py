@@ -4,7 +4,7 @@ import pyautogui
 import time
 
 def home(request):
-    return HttpResponse("<h1>Autonomous Applications</h1>")
+    return render(request, 'auto/home.html', {'title': 'Home'})
 
 def usage(request):
     time.sleep(1)
@@ -22,4 +22,4 @@ def usage(request):
     pyautogui.move(0,100, duration = 0.25)
     for i in range(5):
         pyautogui.scroll(200)
-    return HttpResponse("<h1>How To Use Auto App</h1>")
+    return render(request, 'auto/usage.html')
